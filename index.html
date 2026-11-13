@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>FishGoo spreadsheet – produktlänkar, QC och frakt till Sverige</title>
+  <meta name="description" content="Svensk guide till FishGoo spreadsheet. Hitta kategorier hos CAFANS och lär dig jämföra produktlänkar, storlekar, QC-bilder och frakt till Sverige.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:title" content="FishGoo spreadsheet – svensk köpguide">
+  <meta property="og:description" content="Hitta produktkategorier och jämför storlek, lagerbilder och total kostnad före köp.">
+  <style>
+    :root{color-scheme:light;--paper:#f8f3e8;--ink:#2b2141;--muted:#564b61;--line:#d8cdd9;--accent:#523274}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    .wrap{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+    header{border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:.8rem}
+    a{color:var(--accent);text-underline-offset:.2em}a:focus-visible,summary:focus-visible{outline:3px solid #874bac;outline-offset:4px}
+    .hero,.guides{display:grid;grid-template-columns:1.15fr 1fr;gap:1.5rem}
+    .hero{align-items:center;padding-block:2rem}
+    h1,h2,h3{line-height:1.12;margin:0 0 .65em}h1{font-size:clamp(2.6rem,7vw,5.4rem);letter-spacing:-.065em;margin-bottom:.25em}h2{font-size:clamp(1.55rem,3vw,2.25rem);letter-spacing:-.035em}h3{font-size:1.25rem}
+    p{margin:0 0 1rem}p:last-child{margin-bottom:0}.intro{font-size:1.12rem;max-width:48ch}.note,figcaption{color:var(--muted);font-size:.9rem}
+    .button{display:inline-block;background:var(--accent);color:white;padding:.65rem 1rem;border-radius:.35rem;font-weight:700}
+    figure{margin:0}img{display:block;width:100%;height:auto;background:#eae0ed;border-radius:.55rem}.hero img{aspect-ratio:5/3;object-fit:cover}figcaption{padding-top:.35rem}
+    section{padding-block:1.55rem;border-top:1px solid var(--line)}
+    .categories,.gallery{display:grid;gap:.55rem;list-style:none;padding:0;margin:0}.categories{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .categories a{display:flex;min-height:3.1rem;height:100%;align-items:center;padding:.55rem .7rem;background:#f1e8f3;border:1px solid var(--line);border-radius:.35rem;font-weight:650;overflow-wrap:anywhere}
+    .gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:1.25rem}.gallery img{aspect-ratio:1;object-fit:contain}
+    article{background:#fffaf4;border:1px solid var(--line);border-radius:.55rem;padding:1.1rem}.guides{grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}ol,ul{padding-left:1.3rem}li+li{margin-top:.3rem}.categories li+li{margin-top:0}
+    details{border-top:1px solid var(--line);padding:.75rem 0}summary{cursor:pointer;font-weight:700}details p{margin:.55rem 0 0;max-width:70ch}
+    footer{padding:1.25rem 0;border-top:1px solid var(--line)}
+    @media(max-width:720px){.hero,.guides{grid-template-columns:1fr}.hero{gap:1rem}.categories,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "FishGoo spreadsheet – svensk köpguide",
+    "inLanguage": "sv",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vad är ett FishGoo spreadsheet?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Det är en lista med produktlänkar, ofta från Weidian, Taobao eller 1688. Den hjälper dig att jämföra varor och hitta uppgifter att kontrollera före köp."}
+      },
+      {
+        "@type": "Question",
+        "name": "Hur kontrollerar jag att QC-bilderna gäller rätt vara?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Matcha artikelnummer, färg och storlek mot din beställning. Be om ett foto med måttband eller en extra vinkel om en detalj saknas."}
+      },
+      {
+        "@type": "Question",
+        "name": "Hur uppskattar jag totalkostnaden till Sverige?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Summera varans pris, eventuell inrikesfrakt och serviceavgift, internationell frakt och eventuella importavgifter. Räkna om till SEK med den kurs och de avgifter som gäller vid betalningen."}
+      },
+      {
+        "@type": "Question",
+        "name": "Vart leder kategorilänkarna?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Kategorilänkarna öppnar CAFANS. Den här svenska guiden är fristående från FishGoo."}
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/yyzmf/">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span>Svensk köpguide</span>
+      <a href="https://www.cafans.com">Öppna CAFANS</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="hero">
+      <div>
+        <h1>FishGoo spreadsheet</h1>
+        <p class="intro">En FishGoo-lista samlar produktlänkar så att du kan jämföra varor före köp. Börja med en kategori hos CAFANS och använd guiden för att kontrollera storlek, kvalitetsbilder och frakt till Sverige.</p>
+        <p class="note">Fristående guide. Fotografierna visar exempel på märkesdesign. Se respektive katalog för aktuellt sortiment.</p>
+      </div>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1617924493486-23ea31b5cc00?auto=format&amp;fit=crop&amp;w=800&amp;h=480&amp;q=75" width="800" height="480" fetchpriority="high" alt="Ett par röda, vita och svarta Nike Air Jordan 1">
+      </figure>
+    </div>
+    <section aria-labelledby="kategorier">
+      <h2 id="kategorier">Produktkategorier hos CAFANS</h2>
+      <ul class="categories">
+        <li><a href="https://cafans.com/category-911-Shoes.html">Skor</a></li>
+        <li><a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Huvtröjor och tröjor</a></li>
+        <li><a href="https://cafans.com/category-913-T-Shirts.html">T-shirts</a></li>
+        <li><a href="https://cafans.com/category-914-Jackets.html">Jackor</a></li>
+        <li><a href="https://cafans.com/category-915-Pants%2FShorts.html">Byxor och shorts</a></li>
+        <li><a href="https://cafans.com/category-916-Headwear.html">Kepsar och mössor</a></li>
+        <li><a href="https://cafans.com/category-917-Sets.html">Matchande set</a></li>
+        <li><a href="https://cafans.com/category-918-underwear%2Funderpants.html">Underkläder</a></li>
+        <li><a href="https://cafans.com/category-919-Jersey.html">Matchtröjor</a></li>
+        <li><a href="https://cafans.com/category-920-Accessories.html">Accessoarer</a></li>
+      </ul>
+      <div class="gallery">
+        <figure>
+          <img src="https://static.wixstatic.com/media/b223c2_b839bce783bf494697f3093fa9b74eb1~mv2.jpg/v1/fill/w_420,h_420,al_c,q_75/b223c2_b839bce783bf494697f3093fa9b74eb1~mv2.jpg" width="420" height="420" loading="lazy" decoding="async" alt="Louis Vuitton-handväska med monogram">
+          <figcaption>Louis Vuitton · Monogramväska</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1659595532/681264_3HAGJ_2564_001_100_0000_Light-Casquette-en-toileGG-jumbo.jpg" width="1200" height="1200" loading="lazy" decoding="async" alt="Gucci-keps i canvas med brunt GG-mönster">
+          <figcaption>Gucci · Jumbo GG-keps</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.hermes.com/is/image/hermesproduct/%E3%82%AB%E3%83%AC-90-%E3%80%8A%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%BB%E3%82%A2%E3%83%91%E3%83%A9%E3%80%8B--001364SF45-flat-wm-2-0-0-800-800_g.jpg" width="800" height="800" loading="lazy" decoding="async" alt="Mönstrad Hermès Carré 90-scarf i silke">
+          <figcaption>Hermès · Grand Apparat</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/N2241WOMCYD03S_SBG_E01-2?wid=420&amp;fmt=webp" width="420" height="420" loading="lazy" decoding="async" alt="Guldfärgat Dior Petit CD-halsband med kristaller">
+          <figcaption>Dior · Petit CD-halsband</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section aria-labelledby="guider">
+      <h2 id="guider">Så jämför du länkar, storlekar och frakt</h2>
+      <div class="guides">
+        <article>
+          <h3>FishGoo produktlänkar – från träff till rätt variant</h3>
+          <p>Öppna den aktuella annonsen och anteckna produkt-ID, säljare, färgkod och storlek. När två annonser använder samma modellfoto kan variantnamn och materialbeskrivning hjälpa dig att skilja dem åt. Om en Weidian-länk är trasig kan du söka efter produkt-ID eller modellnamn och jämföra den nya träffen med dina anteckningar.</p>
+        </article>
+        <article>
+          <h3>Storleksguide för FishGoo-fynd</h3>
+          <p>För sneakers, jämför innersulans längd med ett par som passar. Lägg en T-shirt eller huvtröja plant och jämför bröstbredd, axelbredd och plagglängd i centimeter. För byxor, kontrollera midjevidd och innerbenslängd. På en jacka kan ärmlängden avgöra hur den sitter över en tjock tröja.</p>
+        </article>
+        <article>
+          <h3>FishGoo QC-bilder – vad ska synas?</h3>
+          <p>QC står för kvalitetskontroll. Lagerbilder kan visa färg, sömmar och synliga skador på varan. Be om en närbild av dragkedjan på en jacka, ett foto av sulan på ett par skor eller en bild av låset på ett halsband. Äkthet kräver underlag om varans ursprung.</p>
+        </article>
+        <article>
+          <h3>FishGoo frakt till Sverige – räkna på hela paketet</h3>
+          <p>Kontrollera fraktalternativen för ditt svenska postnummer. Jämför faktisk vikt och volymvikt och läs hur transportören beräknar debiteringsvikten. Vid samfrakt kan du jämföra kostnaden för ett gemensamt paket med separata sändningar. Kontrollera också om importmoms ingår och vilka avgifter som kan tillkomma vid leverans.</p>
+        </article>
+      </div>
+    </section>
+    <section aria-labelledby="faq">
+      <h2 id="faq">Vanliga frågor</h2>
+      <details open>
+        <summary>Vad är ett FishGoo spreadsheet?</summary>
+        <p>Det är en lista med produktlänkar, ofta från Weidian, Taobao eller 1688. Den hjälper dig att jämföra varor och hitta uppgifter att kontrollera före köp.</p>
+      </details>
+      <details>
+        <summary>Hur kontrollerar jag att QC-bilderna gäller rätt vara?</summary>
+        <p>Matcha artikelnummer, färg och storlek mot din beställning. Be om ett foto med måttband eller en extra vinkel om en detalj saknas.</p>
+      </details>
+      <details>
+        <summary>Hur uppskattar jag totalkostnaden till Sverige?</summary>
+        <p>Summera varans pris, eventuell inrikesfrakt och serviceavgift, internationell frakt och eventuella importavgifter. Räkna om till SEK med den kurs och de avgifter som gäller vid betalningen.</p>
+      </details>
+      <details>
+        <summary>Vart leder kategorilänkarna?</summary>
+        <p>Kategorilänkarna öppnar CAFANS. Den här svenska guiden är fristående från FishGoo.</p>
+      </details>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap"><a class="button" href="https://www.cafans.com">Bläddra i CAFANS katalog</a></div>
+  </footer>
+</body>
+</html>
